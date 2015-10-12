@@ -1,5 +1,5 @@
 # Build status
-![Build status](https://travis-ci.org/dawnstrider/javachecker.svg?branch=master)
+[![Build status](https://travis-ci.org/dawnstrider/javachecker.svg?branch=master)](https://travis-ci.org/dawnstrider/javachecker)
 
 
 # javachecker
