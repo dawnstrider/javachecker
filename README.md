@@ -1,3 +1,7 @@
+# Build status
+![Build status](https://travis-ci.org/dawnstrider/javachecker.svg?branch=master)
+
+
 # javachecker
 Tool to check what Java version is required by a single jar file or a directory of them.
 
