@@ -9,15 +9,12 @@ import java.util.HashMap;
 import org.junit.Assert;
 import org.junit.Test;
 
-import de.facefungus.javachecker.App;
-import de.facefungus.javachecker.Arguments;
-
 public class AppTest {
 
 	@Test
 	public void testApplication() throws URISyntaxException {
 
-		App ap = new App();
+		JavaChecker ap = new JavaChecker();
 		Arguments args = new Arguments();
 		URL res = getClass().getClassLoader().getResource("cfsclient.jar");
 		File f = new File(res.toURI());
