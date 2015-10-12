@@ -15,7 +15,7 @@ import java.util.jar.JarFile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class App {
+public class JavaChecker {
 
 	private static final int CAFEBABE = -889275714;
 
@@ -35,7 +35,7 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		App a = new App();
+		JavaChecker a = new JavaChecker();
 		Arguments arg = a.parseArguments(args);
 		HashMap<Integer, ArrayList<String>> fm = a.parseJars(arg);
 		a.printFileMap(fm);
