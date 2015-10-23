@@ -15,12 +15,35 @@ import java.util.jar.JarFile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * The main class. Accepts arguments and parses them.
+ * 
+ * The class reads either a single JAR or a directory of JARs. For each JAR, all class files are read
+ * and the compile information is extracted. Once all classes of a JAR are parsed, the JavaChecker
+ * remembers what kind of java versions are required. This can be multiple versions if there are classes
+ * in a JAR file compiled by different java versions.
+ * 
+ * The method {@link #parseJars(Arguments)} returns a map containing all information about the scanned JARs.
+ * 
+ *
+ * @author dawnstrider
+ *
+ */
 public class JavaChecker {
 
+	/**
+	 * Combined value for the first 4 bytes of a class file. Serves as file identifier.
+	 */
 	private static final int CAFEBABE = -889275714;
 
+	/**
+	 * Base constant from which the java version is calculated
+	 */
 	private final int version_base = 44;
 
+	/**
+	 * The map that contains the found versions
+	 */
 	private HashMap<Integer, ArrayList<String>> fileMap = new HashMap<Integer, ArrayList<String>>();
 
 	private boolean verbose = false;
